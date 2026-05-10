@@ -1,0 +1,30 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+
+\section{Основные уравнения UAF-Q (иерархическая система)}
+
+\begin{align}
+\frac{\partial \Gamma_l}{\partial \tau} &= 
+\eta_l\Bigl(\sum_{k<l}\Phi_{k\to l}\mathcal{E}_{k,l}\Gamma_k\Bigr)(1-\alpha_l)^2 
+- \lambda_l\Delta S_{env,l}\alpha_l\Gamma_l 
++ \sum_{m>l}\Psi_{m\to l}\Gamma_m, \\
+\frac{\partial \alpha_l}{\partial \tau} &= 
+\kappa_l\,\alpha_l(1-\alpha_l)(E_l-c_l) 
+- \delta_l(1-\alpha_l)\Gamma_l 
++ \mu_l\sum_{k<l}\mathcal{E}_{k,l}(\Gamma_k-\Gamma_l), \\
+\Phi_{k\to l} &= \beta_{k,l}\,\frac{\Gamma_k\,\alpha_l}{1 + \nu|\Gamma_k-\Gamma_l|}, \\
+E_l &= \Bigl(\prod_{i\in l}\alpha_i\Bigr)^{1/N_l} \cdot 
+\frac{\sum_{k<l}\Phi_{k\to l}\Gamma_k}{\sum_{k<l}\Phi_{k\to l}+\epsilon}.
+\end{align}
+
+\noindent Граничные условия:
+\[
+\frac{\partial \Gamma_0}{\partial \tau} = \eta_0\mathcal{F}_{env} - \lambda_0\Delta S_{env,0}\alpha_0,\qquad
+\frac{\partial \Gamma_L}{\partial \tau} = \eta_L\Bigl(\sum_{k<L}\Phi_{k\to L}\Gamma_k\Bigr)(1-\alpha_L)^2 - \lambda_L\Delta S_{env,L}\alpha_L.
+\]
+
+\section{Условие перехода к классике}
+При $\Gamma_l \to 0$ система сводится к классической UAF: $t_{past}$ растёт, $t_{future}$ сжимается.
+
+\end{document}
